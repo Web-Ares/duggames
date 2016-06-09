@@ -1,6 +1,6 @@
 .categories {
   position: absolute;
-  right: 0;
+  right: 1px;
   width: 110px;
 
   .websters-select{
@@ -9,33 +9,32 @@
     background-color: #94f3e4;
     border: none;
 
+    &:before,
+    &:after{
+      position: absolute;
+      top: 9px;
+      left: 11px;
+      width: 3px;
+      height: 13px;
+      border-radius: 10px;
+      background-color: #333f44;
+      content: '';
+    }
+
+    &:before{
+      transform: rotate(90deg);
+    }
+
     &__arrow{
       display: none;
     }
 
     &__item{
-      left: 0;
-      right: 0;
-      padding: 0 10px 0 25px;
+      left: 25px;
+      right: 10px;
+      padding: 0;
       font-size: 15px;
       line-height: 16px;
-
-      &:before,
-      &:after{
-        position: absolute;
-        left: 13px;
-        top: 1px;
-        width: 3px;
-        height: 13px;
-        border-radius: 10px;
-        background-color: #333f44;
-        content: '';
-      }
-
-      &:before{
-        transform: rotate(90deg);
-      }
-
     }
 
   }
