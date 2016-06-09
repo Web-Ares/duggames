@@ -1,0 +1,36 @@
+.bread-crumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+  font-size: 18px;
+  text-align: center;
+  color: #333f44;
+
+  &__link{
+    position: relative;
+    margin: 0 16px;
+    padding: 0 5px 5px;
+    border-bottom: 5px solid #333f44;
+    color: #333f44;
+
+    &:after{
+      position: absolute;
+      top: 4px;
+      right: -22px;
+      width: 13px;
+      height: 13px;
+      background-color: #333f44;
+      content: '';
+    }
+
+  }
+
+  &__active{
+    margin: 0 16px;
+    padding: 0 5px 5px;
+    border-bottom: 5px solid #333f44;
+    font-weight: normal;
+  }
+
+}

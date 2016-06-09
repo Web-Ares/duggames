@@ -1,0 +1,22 @@
+.menu {
+
+  &__item{
+    position: relative;
+    margin-left: 4px;
+    padding-left: 6px;
+    color: #fff;
+
+    &:before{
+      position: absolute;
+      top: 0;
+      left: -1px;
+      content: '|';
+    }
+
+    &:hover{
+      text-decoration: underline;
+    }
+
+  }
+
+}

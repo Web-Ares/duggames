@@ -1,0 +1,26 @@
+.btn {
+  border: none;
+  height: 40px;
+  margin-bottom: 9px;
+  padding: 0 10px;
+  color: $btn-color;
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  width: 100%;
+  background-color: $btn-back;
+  transition: opacity .3s ease;
+  -webkit-transition: opacity .3s ease;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &:active {
+    opacity: .8;
+  }
+
+}

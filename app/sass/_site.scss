@@ -1,0 +1,84 @@
+.site {
+  @include justify;
+  @include main-font1;
+  position: relative;
+  min-height: 100%;
+  padding-top: 39px;
+  overflow: hidden;
+
+  &:after{
+    height: 72px;
+    content: '';
+  }
+
+  &__header{
+    height: 164px;
+    margin: 0 auto 26px;
+    padding-top: 34px;
+    background: url("../img/bg-header.png") repeat-x top center #333f44;
+
+    &-layout{
+      width: 1122px;
+      margin: 0 auto;
+    }
+
+  }
+
+  &__footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 72px;
+    background-color: #333f44;
+
+    &-layout{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1122px;
+      height: 100%;
+      margin: 0 auto;
+      padding-top: 5px;
+      font-size: 13px;
+      color: #fff;
+      text-align: center;
+    }
+
+  }
+
+  &__centered{
+    width: 1122px;
+    margin: 0 auto;
+  }
+
+  &__title{
+    margin-bottom: 29px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #333f44;
+    text-align: center;
+
+    span{
+      display: inline-block;
+      padding: 0 7px 5px;
+      border-bottom: 6px solid #333f44;
+
+    }
+
+    &_2{
+      margin-bottom: 20px;
+      text-align: left;
+      font-size: 18px;
+
+      span{
+        padding: 0 20px 5px 0;
+        border-bottom-width: 5px;
+      }
+
+    }
+
+  }
+
+}
+

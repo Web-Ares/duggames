@@ -1,0 +1,47 @@
+.contact-us {
+  width: 327px;
+  margin: 0 auto 40px;
+  font-size: 13px;
+  color: #333f44;
+
+  &__item{
+    margin-bottom: 13px;
+  }
+
+  &__btn-wrap{
+    margin-left: 105px;
+  }
+
+  fieldset{
+    margin-bottom: 18px;
+  }
+
+  label,
+  &__topic{
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    margin-right: 2px;
+    padding-top: 14px;
+    color: #333f44;
+    font-size: 13px;
+  }
+
+  &__topic{
+    vertical-align: middle;
+    padding-top: 0;
+  }
+
+  input, textarea{
+    width: 220px;
+    height: 40px;
+    padding: 0 10px;
+    border: 2px solid #dedede;
+  }
+
+  textarea{
+    height: 133px;
+    padding: 10px;
+  }
+
+}

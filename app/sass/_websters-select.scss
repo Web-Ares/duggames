@@ -1,0 +1,125 @@
+.websters-select {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  position: relative;
+  width: 220px;
+  height: 40px;
+  border: 2px solid $websters-select-border;
+  cursor: pointer;
+
+  &_opened {
+
+    .websters-select__arrow {
+      opacity: .8;
+    }
+
+  }
+
+  &__arrow{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    background-color: #333f44;
+    transform-origin: center;
+    -webkit-transition: opacity 200ms ease-in-out;
+    transition: opacity 200ms ease-in-out;
+
+    &:after,
+    &:before {
+      position: absolute;
+      top: 17px;
+      width: 9px;
+      height: 3px;
+      background: $websters-select-border;
+      content: '';
+    }
+
+    &:after {
+      left: 14px;
+      transform: rotate(40deg);
+    }
+
+    &:before {
+      right: 12px;
+      transform: rotate(-40deg);
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    @include absoluteCenterY();
+    right: 20px;
+    left: 5px;
+    padding: 1px 5px 0;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+
+  &_mobile {
+
+    select {
+      position: absolute;
+      top: 0;
+      bottom: -1px;
+      left: 1px;
+      width: 100%;
+    }
+
+  }
+
+  &_custom {
+
+    select {
+      position: absolute;
+      left: -100000px;
+    }
+
+  }
+
+  &__popup {
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    box-sizing: border-box;
+    background: $websters-select-popup-back;
+    @include main-font1;
+
+    ul {
+      padding: 5px 0;
+      z-index: 1;
+    }
+
+    li {
+      white-space: nowrap;
+      overflow: hidden;
+      cursor: pointer;
+      padding: 8px 10px;
+      color: #37aa9c;
+      transition: background-color .3s ease, color .3s ease;
+      -webkit-transition: background-color .3s ease, color .3s ease;
+
+      &:hover {
+        color: $websters-select-popup-item-active-color;
+        background-color: $websters-select-popup-item-active-back;
+      }
+
+      &.active {
+        color: $websters-select-popup-item-active-color !important;
+        background-color: $websters-select-popup-item-active-back !important;
+      }
+
+      &:first-child{
+        display: none;
+      }
+
+    }
+
+  }
+
+}
